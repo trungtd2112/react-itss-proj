@@ -30,7 +30,7 @@ class TodoComplete extends Component{
 		return (
 			<Col sm={ {span: 5, offset: 0} } >
   			<div class="todoComplete">
-				<h2 class="subtitle">Completed List</h2>
+				<h2 class="subtitle">完成したリスト</h2>
 				{this.display()}
 			</div>
 			</Col>

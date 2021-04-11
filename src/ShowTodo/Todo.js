@@ -10,23 +10,23 @@ class Todo extends Component {
       <Row className="todo">
         <div className="backdrop"></div>
         <div className="content">
-          <h2 className="title">TASK DESCRIPTION</h2>
+          <h2 className="title">タスクの説明</h2>
           <div className="Todo card-body">
             <div className="Todo-title card-title">
-              <p>Task name: {this.props.content.title}</p>
+              <p>タスク名: {this.props.content.title}</p>
             </div>
             <div className="Todo-description card-text">
-              Task description: <br/>
+              タスクの説明 : <br/>
               {this.props.content.description}
             </div>
             <div className="Todo-description card-text">
-              Task's state: <br/>
+              タスクの状態: <br/>
               {this.props.content.state === 1 ? 'Completed' : 'Incompleted'}
             </div>
             <div className="Todo-date card-date">{this.props.content.date}</div>
           </div>
           <Button onClick={this.props.close}>
-            Close
+            クローズ
           </Button>
         </div>
       </Row>
