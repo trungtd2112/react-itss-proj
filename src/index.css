@@ -17,3 +17,11 @@ code {
   width: 60%;
   overflow: hidden;
 }
+
+.subtitle {
+  margin-top: 10px;
+}
+
+.todoComplete {
+  margin-left: 6.25%;
+}

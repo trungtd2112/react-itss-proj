@@ -182,7 +182,6 @@ class App extends Component {
                 list={this.state.toDoList}
                 delete={this.deleteTodo}
               />
-              <Col sm={1}></Col>
 
               <Button variant="primary" onClick={this.renderAddToDo}>
                 Create new Work
