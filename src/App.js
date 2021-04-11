@@ -10,7 +10,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 
-import AddTodo from "./AddTodo/AddTodo.js";
+import AddTodo from "./TaskForm/TaskForm.js";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import ChangeStateModal from "./ChangeStateModal/ChangeStateModal";
@@ -150,10 +150,10 @@ class App extends Component {
               }}
             />
             <Button variant="primary" onClick={this.renderToDoList}>
-              List of Works
+              タスクのリスト
             </Button>
             <Button variant="primary" onClick={this.renderAddToDo}>
-              Add Work
+              タスクを追加
             </Button>
           </Row>
 
@@ -172,7 +172,7 @@ class App extends Component {
           >
             <Row className="ListItem justify-content-md-center">
               <Col sm={12} className="title">
-                <h1>To Do List</h1>
+                <h1>やることリスト</h1>
               </Col>
               <TodoComplete
                 list={this.state.toDoList}
@@ -185,14 +185,14 @@ class App extends Component {
               <Col sm={1}></Col>
 
               <Button variant="primary" onClick={this.renderAddToDo}>
-                Create new Work
+                新しいタスクを作成する
               </Button>
               <Button
                 className="justify-content-md-center"
                 variant="primary"
                 onClick={this.renderCalendar}
               >
-                Back to Calendar
+                カレンダーに戻る
               </Button>
             </Row>
           </ReactModal>
