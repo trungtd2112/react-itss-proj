@@ -28,7 +28,7 @@ class TodoComplete extends Component{
 
 	render(){
 		return (
-			<Col sm={ {span: 4, offset: 1} } >
+			<Col sm={ {span: 5, offset: 0} } >
   			<div class="todoComplete">
 				<h2 class="subtitle">Completed List</h2>
 				{this.display()}

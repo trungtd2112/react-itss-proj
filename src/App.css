@@ -113,7 +113,7 @@
   height: 320px;
   border: 1px solid #1d3dcb;
   border-radius: 4px;
-  background-color: #9896ff ;
+  background-color: #b4c6e7;
 }
 
 .ListItem .todoIncomplete {
@@ -129,7 +129,7 @@
   height: 320px;
   border: 1px solid #ff2424;
   border-radius: 4px;
-  background-color: #ffd6d6;
+  background-color: #f8cbad;
 }
 
 .ListItem h1{

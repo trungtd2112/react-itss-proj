@@ -23,7 +23,7 @@ class TodoIncomplete extends Component{
 
 	render(){
 		return (
-			<Col sm={ {span: 4, offset: 2} }>
+			<Col sm={ {span: 5, offset: 1} }>
 			<div class= "todoIncomplete">
 				<h2 class="subtitle">Incompleted List</h2>
 				{this.display()}
