@@ -18,6 +18,7 @@ import Todo from "./ShowTodo/Todo";
 
 import TodoComplete from "./TodoList/TodoComplete.js";
 import TodoIncomplete from "./TodoList/TodoIncomplete.js";
+import Weather from "./weather/Weather.js"
 import ReactModal from "react-modal";
 
 
@@ -53,11 +54,13 @@ class App extends Component {
       isToDoList: false,
       isAddToDo: false,
       isTodo: false,
+      isWeather: false
     };
 
     this.focusEvent = {};
     this.renderToDoList = this.renderToDoList.bind(this);
     this.renderAddToDo = this.renderAddToDo.bind(this);
+    this.renderWeather = this.renderWeather.bind(this);
   }
 
   componentDidMount() {
@@ -111,6 +114,12 @@ class App extends Component {
       isAddToDo: true,
     });
   }
+  
+  renderWeather() {
+    this.setState({
+      isWeather: true
+    });
+  }
 
   handlerAddItemToList = (item) => {
     this.setState((prevState) => ({
@@ -148,12 +157,16 @@ class App extends Component {
               eventClick={(info) => {
                 this.handleClickEvent(info);
               }}
+              locale = 'ja'
             />
-            <Button variant="primary" onClick={this.renderToDoList}>
+            <Button variant="secondary" onClick={this.renderToDoList}>
               タスクのリスト
             </Button>
             <Button variant="primary" onClick={this.renderAddToDo}>
               タスクを追加
+            </Button>
+            <Button variant="success" onClick={this.renderWeather}>
+              天気
             </Button>
           </Row>
 
@@ -163,6 +176,22 @@ class App extends Component {
             overlayClassName="overlay"
           >
             <Todo content={this.focusEvent} close={this.closeTodo} />
+          </ReactModal>
+          
+           <ReactModal
+            isOpen={this.state.isWeather}
+            overlayClassName="overlay"
+            shouldCloseOnOverlayClick={true}
+          >
+            <span
+                class="close"
+                onClick={() =>
+                  this.setState({ isWeather: false})
+                }
+              >
+                &times;
+            </span>
+            <Weather></Weather>
           </ReactModal>
 
           <ReactModal
