@@ -6,13 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <div className="container">
-      <div className="row">
-        <div className="col-10 offset-1">
-           <App />
-        </div>
-      </div>
-    </div>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
